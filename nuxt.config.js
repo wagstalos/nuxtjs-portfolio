@@ -2,7 +2,9 @@ export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: "static",
   publicRuntimeConfig: {
-    baseURL: process.env.BASE_URL || "/",
+    baseURL:
+      process.env.BASE_URL ||
+      "https://5fc2-2804-431-cffe-4d96-c714-c471-fb95-3094.ngrok-free.app",
   },
 
   // Global page headers: https://go.nuxtjs.dev/config-head
