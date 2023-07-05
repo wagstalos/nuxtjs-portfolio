@@ -12,6 +12,14 @@ export const allArticlesQuery = gql`
           body
           date
           link
+          img {
+            data {
+              attributes {
+                alternativeText
+                url
+              }
+            }
+          }
         }
       }
     }
@@ -30,6 +38,14 @@ export const singleArticleQuery = gql`
           body
           slug
           link
+          img {
+            data {
+              attributes {
+                alternativeText
+                url
+              }
+            }
+          }
         }
       }
     }

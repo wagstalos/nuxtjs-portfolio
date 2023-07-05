@@ -3,6 +3,8 @@
     <h2 class="gradient">Projetos</h2>
     <div class="d-flex">
       <div class="card" v-for="article in articles" :key="article.id">
+        <img :src="`${$config.baseURL}${article.attributes.img.data.attributes.url}`"
+          alt="article.attributes.img.data.attributes.alternativeText">
         <h2 class="gradient"> {{ article.attributes.title }} </h2>
         <p> {{ article.attributes.description }} </p>
         <!-- <p>{{ article.attributes.body }}</p> -->
@@ -31,6 +33,14 @@
   padding: 16px;
 }
 
+img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 4px;
+}
+
 .d-flex {
   display: flex;
   flex-wrap: wrap;
@@ -38,15 +48,12 @@
 
 .btn-link {
   color: aqua;
-  /* border: aqua 1px solid; */
-  /* width: 100%; */
-  /* padding: 16px; */
   border-radius: 4px;
   text-decoration: none;
 
 }
 
-hr{
+hr {
   border-color: #040c18;
 }
 
@@ -54,6 +61,16 @@ a {
   margin-top: 16px;
   display: flex;
   align-items: center;
+}
+
+@media (max-width: 767px) {
+  .card {
+    width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+  }
 }
 </style>
 

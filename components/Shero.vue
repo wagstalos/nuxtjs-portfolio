@@ -16,7 +16,7 @@
       <SectionMidias />
     </div>
 
-    <div>
+    <div class="s-hero--img">
       <img src="~/assets/images/avatar.png" alt="Minha Imagem" width="550px">
     </div>
 
@@ -29,7 +29,6 @@
   justify-content: center;
   height: 70vh;
 }
-
 
 span {
   font-size: 68px;
@@ -46,6 +45,29 @@ p {
 
 .s-hero--text {
   width: 50%;
+}
+
+@media (max-width: 767px) {
+  .s-hero {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .d-flex{
+    text-align: center;
+  }
+
+  span {
+    font-size: 48px;
+  }
+
+  .s-hero--text, .s-hero--img{
+    width: 100%;
+  }
+
+  img{
+    max-width: 100%;
+  }
 }
 </style>
 
